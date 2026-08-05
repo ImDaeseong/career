@@ -12,9 +12,9 @@
 이력서에 들어가는 모든 사실은 아래 세 파일에서만 가져옵니다. 여기 없는 내용은 JD가
 아무리 원해도 지어내지 않습니다.
 
-- `resume/resume.md` — 회사명, 직함, 기간, 기술 스택, 담당 업무
-- `portfolio/portfolio.md` — 프로젝트별 상세 (resume.md보다 세밀함)
-- `career-history/tech_history.md` — 연도별 기술 그룹핑
+- `backup/resume/resume.md` — 회사명, 직함, 기간, 기술 스택, 담당 업무
+- `backup/portfolio/portfolio.md` — 프로젝트별 상세 (resume.md보다 세밀함)
+- `backup/career-history/tech_history.md` — 연도별 기술 그룹핑
 
 ---
 
@@ -28,7 +28,7 @@
 4. 프로젝트 (관련 있으면)
 5. 학력 (경력자는 맨 아래)
 
-지금 `resume/resume.md`와 `index.html`은 이미 이 순서를 따르고 있습니다 — 고칠 필요 없음.
+지금 `backup/resume/resume.md`와 `index.html`은 이미 이 순서를 따르고 있습니다 — 고칠 필요 없음.
 
 ## 2. 불릿 작성 — XYZ 공식
 
@@ -51,7 +51,7 @@
 → **최신 ATS(Greenhouse, Workday, iCIMS, Lever)는 PDF를 정상적으로 파싱합니다.**
 문제는 PDF라는 형식 자체가 아니라 **레이아웃용 다단(multi-column) 표**입니다 — 콘텐츠
 표(예: 기술 목록)는 괜찮지만, 이력서 전체를 여러 단으로 배치하는 건 파싱 순서를
-뒤섞을 수 있어 피해야 합니다. 지금 있는 `resume/resume-ats.pdf`는 처음부터 단일 컬럼
+뒤섞을 수 있어 피해야 합니다. 지금 있는 `backup/resume/resume-ats.pdf`는 처음부터 단일 컬럼
 구조라 이 문제가 없습니다.
 
 **실제로 SHRM 2026 공식 리포트 기준 조직의 27%가 채용에 AI를 실제로 씁니다** — 그러니
@@ -72,6 +72,6 @@
 
 1. JD에서 필수 기술/우대 기술/핵심 업무/키워드를 표로 추출
 2. 세 소스 파일과 대조해 **커버됨 / 부분 커버 / 커버 안 됨**으로 정직하게 표시
-3. 회사명·직함·기간은 `resume/resume.md` 원문 그대로 유지, 그 안에서 관련도 높은 불릿을 앞으로 재배치
+3. 회사명·직함·기간은 `backup/resume/resume.md` 원문 그대로 유지, 그 안에서 관련도 높은 불릿을 앞으로 재배치
 4. 없는 내용은 절대 추가하지 않음 — 커버 안 되는 요구사항은 숨기지 않고 그대로 표시
-5. `job-applications/<회사>-<직무>/`에 `tailored-resume.md` + `coverage-map.md` 저장
+5. `backup/job-applications/<회사>-<직무>/`에 `tailored-resume.md` + `coverage-map.md` 저장
