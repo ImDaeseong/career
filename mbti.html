@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>임대성 — 경력 기반 강점 분석</title>
+<style>
+  :root {
+    --bg: #f6f4fb; --card-bg: #ffffff; --border: #e7e2f5;
+    --text: #201c33; --text-muted: #6f6a85;
+    --accent: #7c3aed; --accent-soft: #efe9fe;
+    --shadow: 0 1px 2px rgba(32,28,51,.05), 0 6px 20px rgba(32,28,51,.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17151f; --card-bg: #211e2c; --border: #34304a;
+      --text: #f1eefb; --text-muted: #a9a3c2;
+      --accent: #a78bfa; --accent-soft: #2c2540;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.35);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", "Noto Sans KR", sans-serif;
+    max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem 5rem;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+  }
+  header { margin-bottom: 2rem; }
+  header h1 { font-size: 1.8rem; font-weight: 800; margin: 0 0 .2rem; letter-spacing: -.01em; }
+  header .role { font-size: 1rem; color: var(--accent); font-weight: 600; margin-bottom: .6rem; }
+  .back-link { font-size: .85rem; }
+  .back-link a { color: var(--text-muted); text-decoration: none; }
+  .back-link a:hover { color: var(--accent); }
+
+  section { margin-bottom: 2.2rem; }
+  h2.section-title {
+    font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
+    color: var(--accent); margin: 0 0 .9rem; padding-bottom: .4rem; border-bottom: 2px solid var(--accent-soft);
+  }
+
+  .note {
+    background: var(--accent-soft); border-radius: 12px; padding: .9rem 1.1rem;
+    font-size: .85rem; color: var(--text); margin-bottom: 2.2rem;
+  }
+  .note strong { color: var(--accent); }
+
+  .strength { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px;
+    box-shadow: var(--shadow); padding: 1.1rem 1.3rem; margin-bottom: .9rem; }
+  .strength h3 { font-size: .95rem; font-weight: 700; margin: 0 0 .4rem; }
+  .strength p { font-size: .88rem; color: var(--text-muted); margin: 0 0 .4rem; }
+  .strength .evidence { font-size: .78rem; color: var(--accent); }
+
+  .style-summary { font-size: .92rem; color: var(--text-muted); }
+
+  footer { margin-top: 3rem; font-size: .8rem; color: var(--text-muted); }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="back-link"><a href="index.html">← 이력서로 돌아가기</a></div>
+  <h1>경력 기반 강점 분석</h1>
+  <div class="role">임대성 — 25년 경력 소프트웨어 엔지니어</div>
+</header>
+
+<div class="note">
+  <strong>MBTI가 아닌 실제 경력 데이터 기반입니다.</strong>
+  MBTI 같은 성격유형 검사는 재검사 시 결과가 바뀌는 비율이 높아 신뢰도가 낮고,
+  직업적 성과 예측력도 검증되지 않았다고 다수의 심리학 연구에서 지적됩니다.
+  그래서 이 페이지는 성격유형 검사 대신, 25년간 실제로 쌓인 경력 사항(<a href="index.html">이력서</a> 참고)만을
+  근거로 강점을 정리했습니다.
+</div>
+
+<section>
+  <h2 class="section-title">강점 5가지</h2>
+
+  <div class="strength">
+    <h3>1. 장기 지속성과 신뢰</h3>
+    <p>한 회사(미디어웹)에서 19년간 근속하며 인증 서버, 게임 클라이언트, PC방 관리 플랫폼 전반을 지속적으로 책임졌습니다.</p>
+    <div class="evidence">근거: 미디어웹 2007.03 ~ 2026.08</div>
+  </div>
+
+  <div class="strength">
+    <h3>2. 인프라 레벨 기술 기반</h3>
+    <p>IOCP 기반 비동기 소켓 서버를 온세통신과 미디어웹 두 회사에서 각각 직접 설계·구현했습니다. 겉으로 드러나는 화면단이 아니라 서버 기반기술을 반복적으로 다뤄온 이력입니다.</p>
+    <div class="evidence">근거: 온세통신(2005~2006) 가상주민번호 시스템, 미디어웹 인증 서버</div>
+  </div>
+
+  <div class="strength">
+    <h3>3. 기술 전환 적응력</h3>
+    <p>Windows 데스크톱(MFC/ATL) 개발로 시작해 C# 기반 플랫폼을 거쳐, 2018년부터는 Android(Java/Kotlin) O2O 서비스로 주력 기술을 스스로 확장했습니다.</p>
+    <div class="evidence">근거: 미디어웹 PC방 플랫폼(C++/MFC) → Android O2O 서비스(2018~2026.08)</div>
+  </div>
+
+  <div class="strength">
+    <h3>4. 현지화·팀 관리 경험</h3>
+    <p>인도네시아 자카르타에 2년간 파견되어 서비스 현지화, 인증 서버 이식, 현지 직원 교육·관리를 동시에 수행했습니다.</p>
+    <div class="evidence">근거: 해외 서비스 구축, 2012.01 ~ 2014.03</div>
+  </div>
+
+  <div class="strength">
+    <h3>5. 신기술 자발적 학습</h3>
+    <p>20년 이상 Windows·서버 중심 경력을 쌓은 이후에도, 최근에는 AI 활용 개발을 개인 연구로 지속하고 있습니다.</p>
+    <div class="evidence">근거: 개인 개발 활동 — AI 활용 개발 연구</div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">업무 스타일 요약</h2>
+  <p class="style-summary">
+    잦은 이직으로 다양한 조직을 경험하는 대신, 한 도메인에 오래 머물며 기반 기술(네트워크 서버)부터
+    응용 기술(모바일 앱)까지 담당 범위를 스스로 넓혀온 스타일입니다. 새 기술 스택도 급격한 전환보다는
+    기존 서비스를 유지하면서 점진적으로 확장·흡수하는 방식을 반복해왔습니다.
+  </p>
+</section>
+
+<footer>
+  <a href="index.html">← 이력서로 돌아가기</a>
+</footer>
+
+</body>
+</html>
