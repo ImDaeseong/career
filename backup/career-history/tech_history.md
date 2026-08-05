@@ -136,9 +136,4 @@
 
 연구 분야
 
-- OpenAI API
-- Claude API
-- OpenRouter
-- AI Agent
-- Multi-Agent System
-- AI 자동화 서비스
+- AI 활용 개발 연구

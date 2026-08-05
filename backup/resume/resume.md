@@ -2,7 +2,7 @@
 
 ## 25년 경력 소프트웨어 엔지니어
 
-C++ | Android | AI Agent | Windows Platform
+C++ | Android | AI | Windows Platform
 
 - Email: cs93059@naver.com
 - GitHub: https://github.com/ImDaeseong
@@ -283,15 +283,3 @@ GitHub: https://github.com/ImDaeseong
 
 - 개인 프로젝트 개발
 - AI 활용 개발 연구
-
----
-
-## 현재 기술 연구 분야
-
-- AI Agent
-- Multi-Agent System
-- OpenAI API
-- Claude API
-- OpenRouter
-- AI 활용 개발 자동화
-- LLM 기반 서비스 개발
