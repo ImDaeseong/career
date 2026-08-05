@@ -2,8 +2,7 @@
 
 임대성 경력 관리 저장소입니다.
 
-**바로가기 →** https://imdaeseong.github.io/career/
-(Pages 미설정 시 Settings → Pages → Source: `Deploy from a branch` → `main` / `/(root)`)
+**이력서 →** https://imdaeseong.github.io/career/
 
 ## backup/
 
