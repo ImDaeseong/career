@@ -2,27 +2,16 @@
 
 임대성 경력 관리 저장소입니다.
 
+**이력서 보기 →** [index.html](index.html)
+
+GitHub Pages를 켜면 `https://imdaeseong.github.io/career/`로 링크 하나로 바로 보여줄 수
+있습니다 (Settings → Pages → Source: `Deploy from a branch` → Branch: `main` / `/(root)`).
+
 ## Profile
 
 25년 경력 소프트웨어 엔지니어
 
 Windows Platform · Android · AI Agent
-
-## Documents
-
-- `resume/resume.md` : 최종 마스터 이력서
-- `portfolio/portfolio.md` : 제품 및 프로젝트 중심 포트폴리오
-- `career-history/tech_history.md` : 연도별 기술 이력
-- `interview/interview_notes.md` : 면접 대비 핵심 정리 (예정, 아직 미작성)
-
-## 이력서 작성 가이드
-
-- `skill/SKILL.md` : 이력서 작성·맞춤화 방법론 (섹션 순서, 불릿 작성법, ATS 오해 반박, 제출 전 체크리스트, JD 맞춤화 절차)
-- `skill/SOURCES.md` : 위 가이드의 실제 검증 출처 (GitHub 저장소 라이선스 확인, SHRM·Brookings 공식 리포트)
-
-채용공고(JD)가 있으면 `skill/SKILL.md`의 5번 절차대로, 위 세 문서(`resume.md`/`portfolio.md`/`tech_history.md`)에
-실제로 있는 내용만으로 맞춘 이력서를 `job-applications/<회사>-<직무>/`에 만듭니다. 없는
-경력·기술은 지어내지 않고, 커버 안 되는 요구사항은 정직하게 표시합니다.
 
 ## Core Areas
 
@@ -34,3 +23,9 @@ Windows Platform · Android · AI Agent
 - 비동기 소켓 통신 개발
 - IOCP 기반 인증 서버 개발
 - InstallShield 기반 설치 및 배포 시스템 개발
+
+## backup/
+
+`index.html`의 원본 소스(`resume.md`)와 그 외 작업 중 만들었던 자료(포트폴리오,
+기술이력, ATS 제출용 PDF, JD 맞춤화 가이드)를 옮겨뒀습니다. 지금 당장 쓰는 건
+`index.html` 하나뿐이라 정리 중이며, 필요 없다고 확정되면 수동으로 삭제할 예정입니다.
