@@ -142,7 +142,7 @@
 <section>
   <h2 class="section-title">업무 스타일 요약</h2>
   <p class="style-summary">
-    <span class="career-years">25</span>년 경력 동안 웹 서비스, ERP·보안 연동, 서버·무선 서비스, 트래픽 분석 시스템,
+    다년간 경력 동안 웹 서비스, ERP·보안 연동, 서버·무선 서비스, 트래픽 분석 시스템,
     PC방·모바일 서비스까지 서로 다른 도메인에서 개발을 담당했습니다. 그중 가장 최근인
     미디어웹에서는 19년간 근속하며 담당 범위를 계속 넓혔고, 최근 기록에는 AI 활용 개발
     연구가 추가됐습니다. 다만 경력 문서만으로 학습 방식이나 성격유형까지 판단할 수는 없습니다.
@@ -152,20 +152,6 @@
 <footer>
   <a href="index.html">← 이력서로 돌아가기</a>
 </footer>
-
-<script>
-  (function () {
-    var start = new Date(2000, 5, 1);
-    var now = new Date();
-    var years = now.getFullYear() - start.getFullYear();
-    if (now.getMonth() < start.getMonth() || (now.getMonth() === start.getMonth() && now.getDate() < start.getDate())) {
-      years--;
-    }
-    document.querySelectorAll('.career-years').forEach(function (el) {
-      el.textContent = years;
-    });
-  })();
-</script>
 
 </body>
 </html>
