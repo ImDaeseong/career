@@ -13,7 +13,7 @@ TEXT_SUFFIXES = {".html", ".md", ".txt", ".yaml", ".yml"}
 SUMMARY_FILES = (
     ROOT / "index.html",
 )
-SUMMARY_TOKENS = ("25년 경력", "미디어웹 19년", "초기 경력", "2007", "2026")
+SUMMARY_TOKENS = ("career-years", "년 경력", "미디어웹 19년", "초기 경력", "2007", "2026")
 
 
 class HtmlReferences(HTMLParser):
