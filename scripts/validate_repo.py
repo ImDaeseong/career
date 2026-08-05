@@ -12,8 +12,6 @@ ROOT = Path(__file__).resolve().parents[1]
 TEXT_SUFFIXES = {".html", ".md", ".txt", ".yaml", ".yml"}
 SUMMARY_FILES = (
     ROOT / "index.html",
-    ROOT / "backup/resume/resume.md",
-    ROOT / "backup/resume/resume-ats.html",
 )
 SUMMARY_TOKENS = ("25년 경력", "미디어웹 19년", "초기 경력", "2007", "2026")
 
@@ -85,15 +83,10 @@ def main() -> int:
         if token not in index:
             failures.append(f"index.html missing {token}")
 
-    pdf = ROOT / "backup/resume/resume-ats.pdf"
-    if not pdf.read_bytes().startswith(b"%PDF-"):
-        failures.append("backup/resume/resume-ats.pdf has an invalid PDF signature")
-
-    skill = (ROOT / "skill/SKILL.md").read_text(encoding="utf-8")
-    source_pattern = r"`((?:backup/)?(?:resume|portfolio|career-history)/[^`]+)`"
-    for reference in re.findall(source_pattern, skill):
-        if not (ROOT / reference).exists():
-            failures.append(f"SKILL source path does not exist: {reference}")
+    # backup/(resume.md·portfolio.md·tech_history.md·resume-ats.pdf 등)는 2026-08-05
+    # 사용자가 최종 정리 단계에서 직접 삭제했습니다. skill/*.md는 향후 재사용을 위해
+    # backup/ 경로를 그대로 참조하도록 남겨뒀으므로, 그 경로의 존재 여부는 더 이상
+    # 검사하지 않습니다 (의도적으로 없는 상태).
 
     for skill_path in ROOT.glob("skill/*/SKILL.md"):
         skill_text = skill_path.read_text(encoding="utf-8")
@@ -137,7 +130,7 @@ def main() -> int:
             print(f"FAIL {failure}")
         return 1
 
-    print(f"PASS: {len(files)} files; text, links, HTML, PDF, guide paths, and resume summary are valid.")
+    print(f"PASS: {len(files)} files; text, links, HTML, skill metadata, and resume summary are valid.")
     return 0
 
 
