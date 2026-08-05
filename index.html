@@ -89,7 +89,7 @@
 
 <header class="hero">
   <h1>임대성</h1>
-  <div class="role"><span class="career-years">25</span>년 경력 소프트웨어 엔지니어</div>
+  <div class="role">25년 경력 소프트웨어 엔지니어</div>
   <div class="contact">
     <a href="mailto:cs93059@naver.com">cs93059@naver.com</a>
     <a href="https://github.com/ImDaeseong" target="_blank">github.com/ImDaeseong</a>
@@ -100,7 +100,7 @@
 <section>
   <h2 class="section-title">경력 요약</h2>
   <ul class="summary-list">
-    <li><strong><span class="career-years">25</span>년 경력의 소프트웨어 엔지니어</strong> — Windows 플랫폼, 네트워크 서버, 웹·모바일 환경에서 상용 서비스 개발</li>
+    <li><strong>25년 경력의 소프트웨어 엔지니어</strong> — Windows 플랫폼, 네트워크 서버, 웹·모바일 환경에서 상용 서비스 개발</li>
     <li><strong>미디어웹 19년(2007~2026)</strong> — PC방 관리 플랫폼 3종, IOCP 기반 인증 서버, Android O2O 서비스 4종 개발·운영</li>
     <li><strong>인도네시아 현지 2년(2012~2014)</strong> — 서비스 구축, 기술 지원 및 현지 직원 교육·관리</li>
     <li><strong>초기 경력 6년(2001~2007)</strong> — 뉴소프트기술·온세통신·이오소프트 등에서 기업용 시스템, 통신·보안 서비스, 설치·패치 프로그램 개발</li>
@@ -312,20 +312,6 @@
     <span class="tag">개인 프로젝트 개발</span><span class="tag">AI 활용 개발 연구</span>
   </div>
 </section>
-
-<script>
-  (function () {
-    var start = new Date(2000, 5, 1);
-    var now = new Date();
-    var years = now.getFullYear() - start.getFullYear();
-    if (now.getMonth() < start.getMonth() || (now.getMonth() === start.getMonth() && now.getDate() < start.getDate())) {
-      years--;
-    }
-    document.querySelectorAll('.career-years').forEach(function (el) {
-      el.textContent = years;
-    });
-  })();
-</script>
 
 </body>
 </html>
