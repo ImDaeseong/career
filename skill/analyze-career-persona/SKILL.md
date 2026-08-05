@@ -11,11 +11,8 @@ description: resume.md·portfolio.md·tech_history.md의 실제 경력 기록만
 
 ## 소스 오브 트루스
 
-`resume-tailor`(`skill/SKILL.md`)와 동일한 세 파일만 사실의 출처로 씁니다.
-
-- `backup/resume/resume.md` — 회사명, 기간, 기술 스택, 담당 업무
-- `backup/portfolio/portfolio.md` — 프로젝트별 상세
-- `backup/career-history/tech_history.md` — 연도별 기술 그룹핑
+`resume-tailor`(`skill/SKILL.md`)와 동일한 `resume.md`/`portfolio.md`/`tech_history.md` 세
+파일만 사실의 출처로 씁니다 — 현재 위치는 `skill/SKILL.md`의 "소스 오브 트루스" 절 참고.
 
 `index.html`, `mbti.html`은 결과물일 뿐 새 사실의 출처로 쓰지 않습니다. 세 파일에 없는 내용은
 질문으로 남기거나 생략하고, 성과 수치·성격 특성·리더십 권한을 추론해서 채우지 않습니다.
