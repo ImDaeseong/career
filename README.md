@@ -15,12 +15,14 @@ Windows Platform · Android · AI Agent
 - `career-history/tech_history.md` : 연도별 기술 이력
 - `interview/interview_notes.md` : 면접 대비 핵심 정리 (예정, 아직 미작성)
 
-## 직무 맞춤 이력서 생성
+## 이력서 작성 가이드
 
-`.claude/skills/resume-tailor` — Claude Code에서 이 저장소를 열고 채용공고(JD)를
-붙여넣으면, 위 세 문서에 실제로 있는 내용만으로 그 직무에 맞춘 이력서를
-`job-applications/<회사>-<직무>/`에 생성합니다. 없는 경력·기술을 지어내지
-않고, JD 요구사항 중 커버 안 되는 부분은 정직하게 표시합니다.
+- `skill/SKILL.md` : 이력서 작성·맞춤화 방법론 (섹션 순서, 불릿 작성법, ATS 오해 반박, 제출 전 체크리스트, JD 맞춤화 절차)
+- `skill/SOURCES.md` : 위 가이드의 실제 검증 출처 (GitHub 저장소 라이선스 확인, SHRM·Brookings 공식 리포트)
+
+채용공고(JD)가 있으면 `skill/SKILL.md`의 5번 절차대로, 위 세 문서(`resume.md`/`portfolio.md`/`tech_history.md`)에
+실제로 있는 내용만으로 맞춘 이력서를 `job-applications/<회사>-<직무>/`에 만듭니다. 없는
+경력·기술은 지어내지 않고, 커버 안 되는 요구사항은 정직하게 표시합니다.
 
 ## Core Areas
 

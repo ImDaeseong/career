@@ -1,6 +1,6 @@
 # job-applications
 
-`.claude/skills/resume-tailor` 스킬이 생성한 직무 맞춤 이력서를 저장하는 폴더입니다.
+`skill/SKILL.md`의 절차대로 만든 직무 맞춤 이력서를 저장하는 폴더입니다.
 
 지원 회사/직무마다 하위 폴더가 하나씩 생깁니다:
 
