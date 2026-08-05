@@ -282,10 +282,7 @@ C++ | Android | AI Agent | Windows Platform
 GitHub: https://github.com/ImDaeseong
 
 - 개인 프로젝트 개발
-- Android 개발 연구
-- Flutter 개발 연구
 - AI 활용 개발 연구
-- 오픈소스 분석 및 학습
 
 ---
 
