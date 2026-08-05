@@ -4,9 +4,9 @@
 
 ## Profile
 
-25년 경력 플랫폼 · 시스템 개발자
+25년 경력 소프트웨어 엔지니어
 
-Windows Platform · Android · TCP/IP · IOCP · O2O Service
+Windows Platform · Android · AI Agent
 
 ## Documents
 

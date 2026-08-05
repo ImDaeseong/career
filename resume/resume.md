@@ -1,8 +1,8 @@
 # 임대성
 
-## 25년 경력 플랫폼 · 시스템 개발자
+## 25년 경력 소프트웨어 엔지니어
 
-C++ | Android | TCP/IP | IOCP | Windows Platform
+C++ | Android | AI Agent | Windows Platform
 
 - Email: cs93059@naver.com
 - GitHub: https://github.com/ImDaeseong
