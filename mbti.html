@@ -8,49 +8,77 @@
   :root {
     --bg: #f6f4fb; --card-bg: #ffffff; --border: #e7e2f5;
     --text: #201c33; --text-muted: #6f6a85;
-    --accent: #7c3aed; --accent-soft: #efe9fe;
+    --accent: #7c3aed; --accent-2: #ec4899; --accent-soft: #efe9fe;
     --shadow: 0 1px 2px rgba(32,28,51,.05), 0 6px 20px rgba(32,28,51,.07);
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #17151f; --card-bg: #211e2c; --border: #34304a;
       --text: #f1eefb; --text-muted: #a9a3c2;
-      --accent: #a78bfa; --accent-soft: #2c2540;
+      --accent: #a78bfa; --accent-2: #f472b6; --accent-soft: #2c2540;
       --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.35);
     }
   }
   * { box-sizing: border-box; }
   body {
     font-family: -apple-system, "Segoe UI", "Noto Sans KR", sans-serif;
-    max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem 5rem;
+    max-width: 860px; margin: 0 auto; padding: 0 1.5rem 5rem;
     background: var(--bg); color: var(--text); line-height: 1.65;
   }
-  header { margin-bottom: 2rem; }
-  header h1 { font-size: 1.8rem; font-weight: 800; margin: 0 0 .2rem; letter-spacing: -.01em; }
-  header .role { font-size: 1rem; color: var(--accent); font-weight: 600; margin-bottom: .6rem; }
-  .back-link { font-size: .85rem; }
+  .back-link { font-size: .85rem; padding: 1.3rem 0 0; }
   .back-link a { color: var(--text-muted); text-decoration: none; }
   .back-link a:hover { color: var(--accent); }
 
-  section { margin-bottom: 2.2rem; }
+  .hero {
+    margin: 1.2rem 0 2.4rem; padding: 2.2rem 2rem;
+    border-radius: 20px; color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: var(--shadow);
+  }
+  .hero h1 { font-size: 1.6rem; font-weight: 800; margin: 0 0 .35rem; letter-spacing: -.01em; }
+  .hero .role { font-size: .95rem; opacity: .92; font-weight: 600; }
+
+  section { margin-bottom: 2.4rem; }
   h2.section-title {
     font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
-    color: var(--accent); margin: 0 0 .9rem; padding-bottom: .4rem; border-bottom: 2px solid var(--accent-soft);
+    color: var(--accent); margin: 0 0 1rem; padding-bottom: .4rem; border-bottom: 2px solid var(--accent-soft);
   }
 
   .note {
-    background: var(--accent-soft); border-radius: 12px; padding: .9rem 1.1rem;
-    font-size: .85rem; color: var(--text); margin-bottom: 2.2rem;
+    display: flex; gap: .8rem; align-items: flex-start;
+    background: var(--accent-soft); border-radius: 12px; border-left: 4px solid var(--accent);
+    padding: 1rem 1.2rem; font-size: .85rem; color: var(--text); margin-bottom: 2.4rem;
   }
-  .note strong { color: var(--accent); }
+  .note .badge {
+    flex: none; width: 1.6rem; height: 1.6rem; border-radius: 50%;
+    background: var(--accent); color: #fff; font-size: .8rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .note strong { color: var(--accent); display: block; margin-bottom: .2rem; }
 
-  .strength { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px;
-    box-shadow: var(--shadow); padding: 1.1rem 1.3rem; margin-bottom: .9rem; }
-  .strength h3 { font-size: .95rem; font-weight: 700; margin: 0 0 .4rem; }
-  .strength p { font-size: .88rem; color: var(--text-muted); margin: 0 0 .4rem; }
-  .strength .evidence { font-size: .78rem; color: var(--accent); }
+  .strength-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; }
+  .strength {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px;
+    box-shadow: var(--shadow); padding: 1.2rem 1.3rem;
+  }
+  .strength-head { display: flex; align-items: center; gap: .6rem; margin-bottom: .5rem; }
+  .strength-head .num {
+    flex: none; width: 1.8rem; height: 1.8rem; border-radius: 50%;
+    background: var(--accent-soft); color: var(--accent); font-weight: 800; font-size: .85rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .strength h3 { font-size: .95rem; font-weight: 700; margin: 0; }
+  .strength p { font-size: .88rem; color: var(--text-muted); margin: 0 0 .5rem; }
+  .strength .evidence {
+    font-size: .75rem; color: var(--accent); background: var(--accent-soft);
+    display: inline-block; padding: .15rem .55rem; border-radius: 999px;
+  }
 
-  .style-summary { font-size: .92rem; color: var(--text-muted); }
+  .style-summary {
+    font-size: .92rem; color: var(--text-muted);
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px;
+    box-shadow: var(--shadow); padding: 1.2rem 1.3rem;
+  }
 
   footer { margin-top: 3rem; font-size: .8rem; color: var(--text-muted); }
   footer a { color: inherit; }
@@ -58,62 +86,66 @@
 </head>
 <body>
 
-<header>
-  <div class="back-link"><a href="index.html">← 이력서로 돌아가기</a></div>
+<div class="back-link"><a href="index.html">← 이력서로 돌아가기</a></div>
+
+<div class="hero">
   <h1>경력 기반 강점 분석</h1>
   <div class="role">임대성 — 25년 경력 소프트웨어 엔지니어</div>
-</header>
+</div>
 
 <div class="note">
-  <strong>MBTI가 아닌 실제 경력 데이터 기반입니다.</strong>
-  MBTI 같은 성격유형 검사는 재검사 시 결과가 바뀌는 비율이 높아 신뢰도가 낮고,
-  직업적 성과 예측력도 검증되지 않았다고 다수의 심리학 연구에서 지적됩니다.
-  그래서 이 페이지는 성격유형 검사 대신, 25년간 실제로 쌓인 경력 사항(<a href="index.html">이력서</a> 참고)만을
-  근거로 강점을 정리했습니다.
+  <span class="badge">i</span>
+  <div>
+    <strong>MBTI가 아닌 실제 경력 데이터 기반입니다.</strong>
+    경력 기록만으로 심리적 성격유형을 판정할 수는 없습니다. 이 페이지는 MBTI 유형을
+    추정하는 대신, 25년간 실제로 기록된 경력 사항(<a href="index.html">이력서</a> 참고)에서
+    반복해서 확인되는 업무 경험과 기술 변화를 정리했습니다.
+  </div>
 </div>
 
 <section>
   <h2 class="section-title">강점 5가지</h2>
 
-  <div class="strength">
-    <h3>1. 장기 지속성과 신뢰</h3>
-    <p>한 회사(미디어웹)에서 19년간 근속하며 인증 서버, 게임 클라이언트, PC방 관리 플랫폼 전반을 지속적으로 책임졌습니다.</p>
-    <div class="evidence">근거: 미디어웹 2007.03 ~ 2026.08</div>
-  </div>
+  <div class="strength-grid">
+    <div class="strength">
+      <div class="strength-head"><span class="num">1</span><h3>장기 지속성과 신뢰</h3></div>
+      <p>한 회사(미디어웹)에서 19년간 근속하며 인증 서버, 게임 클라이언트, PC방 관리 플랫폼을 지속적으로 개발·운영했습니다.</p>
+      <span class="evidence">미디어웹 2007.03 ~ 2026.08</span>
+    </div>
 
-  <div class="strength">
-    <h3>2. 인프라 레벨 기술 기반</h3>
-    <p>IOCP 기반 비동기 소켓 서버를 온세통신과 미디어웹 두 회사에서 각각 직접 설계·구현했습니다. 겉으로 드러나는 화면단이 아니라 서버 기반기술을 반복적으로 다뤄온 이력입니다.</p>
-    <div class="evidence">근거: 온세통신(2005~2006) 가상주민번호 시스템, 미디어웹 인증 서버</div>
-  </div>
+    <div class="strength">
+      <div class="strength-head"><span class="num">2</span><h3>인프라 레벨 기술 기반</h3></div>
+      <p>온세통신과 미디어웹에서 IOCP 기반 서버를 개발했습니다. 화면 개발뿐 아니라 네트워크 서버 기반기술을 반복적으로 다뤄온 이력입니다.</p>
+      <span class="evidence">온세통신(2005~2006) 가상주민번호 시스템, 미디어웹 인증 서버</span>
+    </div>
 
-  <div class="strength">
-    <h3>3. 기술 전환 적응력</h3>
-    <p>Windows 데스크톱(MFC/ATL) 개발로 시작해 C# 기반 플랫폼을 거쳐, 2018년부터는 Android(Java/Kotlin) O2O 서비스로 주력 기술을 스스로 확장했습니다.</p>
-    <div class="evidence">근거: 미디어웹 PC방 플랫폼(C++/MFC) → Android O2O 서비스(2018~2026.08)</div>
-  </div>
+    <div class="strength">
+      <div class="strength-head"><span class="num">3</span><h3>기술 전환 적응력</h3></div>
+      <p>Windows 데스크톱(MFC/ATL) 개발로 시작해 C# 기반 플랫폼을 거쳐, 2018년부터는 Android(Java/Kotlin) O2O 서비스까지 담당 기술을 확장했습니다.</p>
+      <span class="evidence">PC방 플랫폼(C++/MFC) → Android O2O(2018~2026.08)</span>
+    </div>
 
-  <div class="strength">
-    <h3>4. 현지화·팀 관리 경험</h3>
-    <p>인도네시아 자카르타에 2년간 파견되어 서비스 현지화, 인증 서버 이식, 현지 직원 교육·관리를 동시에 수행했습니다.</p>
-    <div class="evidence">근거: 해외 서비스 구축, 2012.01 ~ 2014.03</div>
-  </div>
+    <div class="strength">
+      <div class="strength-head"><span class="num">4</span><h3>현지화·팀 관리 경험</h3></div>
+      <p>인도네시아 자카르타에 2년간 파견되어 서비스 현지화, 인증 서버 이식, 현지 직원 교육·관리를 동시에 수행했습니다.</p>
+      <span class="evidence">해외 서비스 구축, 2012.01 ~ 2014.03</span>
+    </div>
 
-  <div class="strength">
-    <h3>5. 신기술 자발적 학습</h3>
-    <p>20년 이상 Windows·서버 중심 경력을 쌓은 이후에도, 최근에는 AI 활용 개발을 개인 연구로 지속하고 있습니다.</p>
-    <div class="evidence">근거: 개인 개발 활동 — AI 활용 개발 연구</div>
+    <div class="strength">
+      <div class="strength-head"><span class="num">5</span><h3>AI 활용 연구 추가</h3></div>
+      <p>Windows·서버·Android 중심 경력에 최근 AI 활용 개발 연구가 개인 개발 활동으로 추가됐습니다.</p>
+      <span class="evidence">개인 개발 활동 — AI 활용 개발 연구</span>
+    </div>
   </div>
 </section>
 
 <section>
   <h2 class="section-title">업무 스타일 요약</h2>
   <p class="style-summary">
-    잦은 이직으로 다양한 조직을 거치는 대신, 한 도메인에 오래 머물면서도 담당 범위를 스스로 계속
-    넓혀온 스타일입니다. 기반 기술(네트워크 서버)에 머물지 않고, 이전까지 다뤄본 적 없는 Android
-    모바일 앱 개발을 혼자 학습해 서비스로 출시했고, 최근에는 AI 활용 개발도 개인 연구로 적극적으로
-    테스트하고 있습니다. 안정적인 포지션에 안주하기보다 새 기술 스택을 스스로 찾아 흡수하는 진취적인
-    태도가 반복적으로 나타납니다.
+    잦은 이직으로 다양한 조직을 거치는 대신, 한 도메인에 오래 머무는 동안 담당 범위가
+    넓어진 경력입니다. 네트워크 서버와 Windows 클라이언트에서 Android 모바일 서비스까지
+    담당 기술이 확장됐고, 최근 기록에는 AI 활용 개발 연구가 추가됐습니다. 다만 경력 문서만으로
+    학습 방식이나 성격유형까지 판단할 수는 없습니다.
   </p>
 </section>
 

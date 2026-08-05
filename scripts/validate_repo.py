@@ -9,7 +9,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TEXT_SUFFIXES = {".html", ".md", ".txt"}
+TEXT_SUFFIXES = {".html", ".md", ".txt", ".yaml", ".yml"}
 SUMMARY_FILES = (
     ROOT / "index.html",
     ROOT / "backup/resume/resume.md",
@@ -94,6 +94,37 @@ def main() -> int:
     for reference in re.findall(source_pattern, skill):
         if not (ROOT / reference).exists():
             failures.append(f"SKILL source path does not exist: {reference}")
+
+    for skill_path in ROOT.glob("skill/*/SKILL.md"):
+        skill_text = skill_path.read_text(encoding="utf-8")
+        relative = skill_path.relative_to(ROOT)
+        if "[TODO" in skill_text:
+            failures.append(f"unfinished skill template: {relative}")
+        frontmatter = re.match(r"^---\nname: ([a-z0-9-]+)\ndescription: (.+?)\n---\n", skill_text)
+        if not frontmatter:
+            failures.append(f"invalid skill frontmatter: {relative}")
+            continue
+        metadata_path = skill_path.parent / "agents/openai.yaml"
+        if not metadata_path.exists():
+            failures.append(f"missing skill metadata: {metadata_path.relative_to(ROOT)}")
+        else:
+            metadata = metadata_path.read_text(encoding="utf-8")
+            if f"${frontmatter.group(1)}" not in metadata:
+                failures.append(f"skill metadata prompt does not name ${frontmatter.group(1)}")
+
+    mbti = (ROOT / "mbti.html").read_text(encoding="utf-8")
+    if "경력 기록만으로 심리적 성격유형을 판정할 수는 없습니다" not in mbti:
+        failures.append("mbti.html is missing its non-diagnostic limitation")
+    for unsupported in (
+        "다수의 심리학 연구",
+        "혼자 학습",
+        "스스로 찾아 흡수",
+        "스스로 계속",
+        "자발적 학습",
+        "직접 설계·구현",
+    ):
+        if unsupported in mbti:
+            failures.append(f"mbti.html contains an unsupported claim: {unsupported}")
 
     for path in SUMMARY_FILES:
         text = path.read_text(encoding="utf-8")

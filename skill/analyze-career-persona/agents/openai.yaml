@@ -1,0 +1,4 @@
+interface:
+  display_name: "Career Self-Analysis"
+  short_description: "Build an evidence-based career persona report"
+  default_prompt: "Use $analyze-career-persona to build an evidence-based career self-analysis report."
