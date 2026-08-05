@@ -83,10 +83,10 @@ def main() -> int:
         if token not in index:
             failures.append(f"index.html missing {token}")
 
-    # backup/(resume.md·portfolio.md·tech_history.md·resume-ats.pdf 등)는 2026-08-05
-    # 사용자가 최종 정리 단계에서 직접 삭제했습니다. skill/*.md는 향후 재사용을 위해
-    # backup/ 경로를 그대로 참조하도록 남겨뒀으므로, 그 경로의 존재 여부는 더 이상
-    # 검사하지 않습니다 (의도적으로 없는 상태).
+    for guide_path in (ROOT / "skill").glob("**/*.md"):
+        guide = guide_path.read_text(encoding="utf-8")
+        if "backup/" in guide:
+            failures.append(f"deleted backup path referenced by {guide_path.relative_to(ROOT)}")
 
     for skill_path in ROOT.glob("skill/*/SKILL.md"):
         skill_text = skill_path.read_text(encoding="utf-8")

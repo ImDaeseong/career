@@ -1,20 +1,18 @@
 ---
 name: analyze-career-persona
-description: resume.md·portfolio.md·tech_history.md의 실제 경력 기록만 근거로 mbti.html(경력 기반 강점 분석)을 작성·갱신하는 방법론. 성격유형을 진단하지 않고 관찰된 사실과 해석을 분리해서 씁니다.
+description: index.html의 실제 경력 기록만 근거로 mbti.html(경력 기반 강점 분석)을 작성·갱신하는 방법론. 성격유형을 진단하지 않고 관찰된 사실과 해석을 분리해서 씁니다.
 ---
 
 # analyze-career-persona — 경력 기반 자기분석 스킬
 
 `career/` 저장소의 `mbti.html`(경력 기반 강점 분석 페이지)을 작성·갱신할 때 쓰는 방법론입니다.
-성격유형을 진단하는 대신, 이미 검증된 본인 경력 데이터(`resume.md`/`portfolio.md`/
-`tech_history.md`)만 근거로 강점과 업무 패턴을 정리합니다.
+성격유형을 진단하는 대신, 공개 이력서 `index.html`에 기록된 경력 데이터만 근거로
+강점과 업무 패턴을 정리합니다.
 
 ## 소스 오브 트루스
 
-`resume-tailor`(`skill/SKILL.md`)와 동일한 `resume.md`/`portfolio.md`/`tech_history.md` 세
-파일만 사실의 출처로 씁니다 — 현재 위치는 `skill/SKILL.md`의 "소스 오브 트루스" 절 참고.
-
-`index.html`, `mbti.html`은 결과물일 뿐 새 사실의 출처로 쓰지 않습니다. 세 파일에 없는 내용은
+`resume-tailor`(`skill/SKILL.md`)와 동일하게 `index.html`만 사실의 출처로 씁니다.
+`mbti.html`은 결과물일 뿐 새 사실의 출처로 쓰지 않습니다. `index.html`에 없는 내용은
 질문으로 남기거나 생략하고, 성과 수치·성격 특성·리더십 권한을 추론해서 채우지 않습니다.
 
 ## 작성 원칙
