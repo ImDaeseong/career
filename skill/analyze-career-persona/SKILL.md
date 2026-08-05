@@ -1,44 +1,43 @@
 ---
 name: analyze-career-persona
-description: Analyze career records into an evidence-based self-analysis report without inventing personality traits. Use when creating or updating a career persona, MBTI-related reflection, strengths report, role-fit analysis, or personal-data report from resume, portfolio, and technical-history files.
+description: resume.md·portfolio.md·tech_history.md의 실제 경력 기록만 근거로 mbti.html(경력 기반 강점 분석)을 작성·갱신하는 방법론. 성격유형을 진단하지 않고 관찰된 사실과 해석을 분리해서 씁니다.
 ---
 
-# Analyze Career Persona
+# analyze-career-persona — 경력 기반 자기분석 스킬
 
-Turn career records into a self-analysis that separates observed facts from interpretation. Do not diagnose a psychological type or present "more accurate than MBTI" as a validated claim.
+`career/` 저장소의 `mbti.html`(경력 기반 강점 분석 페이지)을 작성·갱신할 때 쓰는 방법론입니다.
+"코딩알려주는누나"의 AI 자기분석 보고서 영상(2026-05-20)을 참고하려 했으나, 영상 원문과
+"페르소나 스킬" 구글드라이브 링크가 모두 잘린 채로만 전달돼 실제 내용을 확인하지 못했습니다
+(`SKILL.md` 저장소 `SOURCES.md` 참고). 그래서 영상 방식을 그대로 따르지 않고, 이미 검증된
+본인 경력 데이터만 근거로 삼는 방식으로 대체했습니다.
 
-## Source order
+## 소스 오브 트루스
 
-Read these repository-relative sources:
+`resume-tailor`(`skill/SKILL.md`)와 동일한 세 파일만 사실의 출처로 씁니다.
 
-1. `backup/resume/resume.md` for employers, dates, roles, and skills
-2. `backup/portfolio/portfolio.md` for project and responsibility detail
-3. `backup/career-history/tech_history.md` for chronological technology changes
-4. `index.html` and `mbti.html` only as outputs to reconcile, never as new factual sources
+- `backup/resume/resume.md` — 회사명, 기간, 기술 스택, 담당 업무
+- `backup/portfolio/portfolio.md` — 프로젝트별 상세
+- `backup/career-history/tech_history.md` — 연도별 기술 그룹핑
 
-If a claim is absent from the three primary sources, label it as a question or omit it. Never infer private company data, performance numbers, personality traits, or leadership authority.
+`index.html`, `mbti.html`은 결과물일 뿐 새 사실의 출처로 쓰지 않습니다. 세 파일에 없는 내용은
+질문으로 남기거나 생략하고, 성과 수치·성격 특성·리더십 권한을 추론해서 채우지 않습니다.
 
-## Workflow
+## 작성 원칙
 
-1. Extract dated facts into company, project, technology, responsibility, and environment groups.
-2. Name a pattern only when at least two projects or periods support it.
-3. Write each finding as observation, interpretation, limitation, and next evidence.
-4. For MBTI-related requests, discuss each axis as a reflection prompt. Do not output a four-letter type unless the user supplies a real assessment and asks to display it.
-5. Separate demonstrated strengths from emerging interests. Treat AI as an emerging research area unless newer primary-source evidence says otherwise.
-6. Remove email, private URLs, customer data, internal metrics, credentials, and unpublished company information from public reports.
-7. Reconcile every factual statement against the primary sources, then run `python scripts/validate_repo.py`.
+1. 회사·기간·기술처럼 기록에 있는 사실과, 거기서 이끌어낸 해석(강점·패턴)을 분리해서 씁니다.
+2. 패턴은 최소 두 개 이상의 프로젝트나 기간에서 반복 확인될 때만 이름 붙입니다.
+3. MBTI 4글자 유형은 실제 검사 결과가 없으면 표시하지 않고, "MBTI보다 정확하다" 같은 비교
+   우위 주장도 하지 않습니다 — MBTI 자체의 신뢰도·타당도 문제는 심리학 연구에서 지적돼 왔습니다
+   (`SOURCES.md`의 MBTI 관련 항목 참고).
+4. 이메일, 고객 데이터, 내부 수치, 미공개 회사 정보는 공개 페이지에서 제거합니다.
+5. 작성 후 `python scripts/validate_repo.py`를 실행해 `mbti.html` 회귀 가드를 통과하는지
+   확인합니다.
+   - 비진단 한계 문구("경력 기록만으로 심리적 성격유형을 판정할 수는 없습니다")가 남아 있는지
+   - 근거 없는 단정 표현("다수의 심리학 연구", "혼자 학습", "스스로 찾아 흡수", "스스로 계속",
+     "자발적 학습", "직접 설계·구현" 등)이 다시 들어가지 않았는지
 
-## Report structure
+## mbti.html 구성 순서
 
-Use this order:
-
-1. Data coverage and limits
-2. Career pattern summary
-3. Evidence-backed strengths
-4. MBTI-axis reflection without type diagnosis
-5. Work-environment and role hypotheses
-6. Risks, missing evidence, and counterexamples
-7. Next actions
-8. Method and source note
-
-Keep the report useful for decisions rather than flattering. Phrase role fit as a hypothesis to test, not a verdict.
+1. 안내문 — MBTI 대신 경력 데이터를 근거로 쓴다는 점과 한계 명시
+2. 강점 카드 — 회사별로 실제 담당 업무를 근거와 함께 정리 (한 회사에 쏠리지 않게 전체 이력 반영)
+3. 업무 스타일 요약 — 여러 강점 카드에서 반복되는 패턴만 요약, 판단이 아닌 관찰로 서술
