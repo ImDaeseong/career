@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>임대성 — 이력서</title>
+<style>
+  :root {
+    --bg: #f6f4fb; --card-bg: #ffffff; --border: #e7e2f5;
+    --text: #201c33; --text-muted: #6f6a85;
+    --accent: #7c3aed; --accent-soft: #efe9fe;
+    --shadow: 0 1px 2px rgba(32,28,51,.05), 0 6px 20px rgba(32,28,51,.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17151f; --card-bg: #211e2c; --border: #34304a;
+      --text: #f1eefb; --text-muted: #a9a3c2;
+      --accent: #a78bfa; --accent-soft: #2c2540;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.35);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", "Noto Sans KR", sans-serif;
+    max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem 5rem;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+  }
+  header { margin-bottom: 2.5rem; }
+  header h1 { font-size: 2rem; font-weight: 800; margin: 0 0 .2rem; letter-spacing: -.01em; }
+  header .role { font-size: 1.05rem; color: var(--accent); font-weight: 600; margin-bottom: .6rem; }
+  .contact { display: flex; gap: 1.2rem; flex-wrap: wrap; font-size: .85rem; color: var(--text-muted); }
+  .contact a { color: inherit; text-decoration: none; }
+  .contact a:hover { color: var(--accent); }
+
+  section { margin-bottom: 2.2rem; }
+  h2.section-title {
+    font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
+    color: var(--accent); margin: 0 0 .9rem; padding-bottom: .4rem; border-bottom: 2px solid var(--accent-soft);
+  }
+
+  .summary { font-size: .95rem; color: var(--text-muted); }
+
+  .skill-groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .8rem; }
+  .skill-group { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); padding: .9rem 1rem; }
+  .skill-group h3 { font-size: .8rem; font-weight: 700; margin: 0 0 .5rem; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: .35rem; }
+  .tag { font-size: .75rem; background: var(--accent-soft); color: var(--accent); padding: .15rem .55rem; border-radius: 999px; }
+
+  .job { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); padding: 1.2rem 1.4rem; margin-bottom: 1rem; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .3rem; margin-bottom: .2rem; }
+  .job-head .company { font-size: 1.05rem; font-weight: 700; }
+  .job-head .period { font-size: .8rem; color: var(--text-muted); white-space: nowrap; }
+  .job-title { font-size: .85rem; color: var(--text-muted); margin-bottom: .7rem; }
+  .project { margin-top: .8rem; }
+  .project:first-of-type { margin-top: 0; }
+  .project h4 { font-size: .88rem; font-weight: 700; margin: 0 0 .3rem; }
+  .project .sub-period { font-size: .75rem; color: var(--text-muted); font-weight: 400; margin-left: .4rem; }
+  .project ul { margin: .35rem 0 .5rem 1.1rem; padding: 0; font-size: .85rem; }
+  .project li { margin-bottom: .15rem; }
+
+  .edu-cert { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); padding: 1rem 1.2rem; font-size: .88rem; }
+  .edu-cert .row { display: flex; justify-content: space-between; margin-bottom: .3rem; }
+  .edu-cert .row:last-child { margin-bottom: 0; }
+
+  .research-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+
+  footer { margin-top: 3rem; text-align: center; font-size: .75rem; color: var(--text-muted); }
+
+  @media print {
+    body { max-width: none; padding: 1cm; background: #fff; color: #000; }
+    .job, .skill-group, .edu-cert { box-shadow: none; border: 1px solid #ccc; }
+    section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>임대성</h1>
+  <div class="role">25년 경력 플랫폼 · 시스템 개발자</div>
+  <div class="contact">
+    <a href="mailto:cs93059@naver.com">cs93059@naver.com</a>
+    <a href="https://github.com/ImDaeseong" target="_blank">github.com/ImDaeseong</a>
+  </div>
+</header>
+
+<section>
+  <h2 class="section-title">경력 요약</h2>
+  <p class="summary">
+    25년 이상 상용 소프트웨어 개발 업무를 수행해 왔습니다. Windows 기반 플랫폼 개발부터 Android 앱 개발까지
+    다양한 환경에서 상용 서비스를 개발하였습니다. PC방 관리 플랫폼, 인증 서버, 게임 런처, 패치 시스템,
+    Android O2O 서비스, 업무용 플랫폼 등 실제 운영되는 서비스의 신규 개발, 운영 및 기능 개선 업무를
+    수행하였으며, TCP/IP 비동기 소켓 통신 및 IOCP 서버 개발 경험을 보유하고 있습니다.
+    또한 인도네시아 현지 서비스 구축 및 기술 지원 경험이 있습니다.
+  </p>
+</section>
+
+<section>
+  <h2 class="section-title">핵심 기술</h2>
+  <div class="skill-groups">
+    <div class="skill-group">
+      <h3>개발 언어</h3>
+      <div class="tag-row">
+        <span class="tag">C++</span><span class="tag">C#</span><span class="tag">Java</span>
+        <span class="tag">Kotlin</span><span class="tag">Python</span><span class="tag">Go</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Windows 플랫폼</h3>
+      <div class="tag-row">
+        <span class="tag">MFC</span><span class="tag">ATL</span><span class="tag">COM</span>
+        <span class="tag">OCX</span><span class="tag">Win32 API</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>네트워크</h3>
+      <div class="tag-row">
+        <span class="tag">TCP/IP</span><span class="tag">비동기 소켓 통신</span><span class="tag">IOCP 서버 개발</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>모바일</h3>
+      <div class="tag-row">
+        <span class="tag">Android</span><span class="tag">Java</span><span class="tag">Kotlin</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Database</h3>
+      <div class="tag-row">
+        <span class="tag">Oracle</span><span class="tag">MSSQL</span><span class="tag">MariaDB</span><span class="tag">MySQL</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>배포</h3>
+      <div class="tag-row">
+        <span class="tag">InstallShield</span><span class="tag">설치 프로그램 개발</span><span class="tag">패치 시스템 개발</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>개발 도구</h3>
+      <div class="tag-row">
+        <span class="tag">Visual Studio</span><span class="tag">Android Studio</span><span class="tag">Git</span><span class="tag">GitHub</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">경력 사항</h2>
+
+  <div class="job">
+    <div class="job-head">
+      <span class="company">미디어웹</span>
+      <span class="period">2007.03 ~ 현재</span>
+    </div>
+    <div class="job-title">사업본부 부장 / 개발팀장</div>
+
+    <div class="project">
+      <h4>PC방 관리 플랫폼 개발</h4>
+      <div class="tag-row" style="margin-bottom:.4rem">
+        <span class="tag">C++</span><span class="tag">MFC</span><span class="tag">ATL</span><span class="tag">C#</span>
+        <span class="tag">MSSQL</span><span class="tag">TCP/IP</span><span class="tag">IOCP</span>
+      </div>
+      <ul>
+        <li>피카플레이 / 피카에어 / 피카라이브 개발</li>
+        <li>피카라이브 카운터 프로그램 개발 참여</li>
+        <li>IOCP 기반 인증 서버 개발</li>
+        <li>TCP/IP 비동기 소켓 통신 기반 클라이언트 개발</li>
+        <li>게임 런처 / 게임 패치 시스템 개발</li>
+        <li>피카툴즈 개발, 운영 관리 도구 개발</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h4>Android O2O 서비스 개발</h4>
+      <div class="tag-row" style="margin-bottom:.4rem">
+        <span class="tag">Android</span><span class="tag">Java</span><span class="tag">Kotlin</span>
+        <span class="tag">Oracle</span><span class="tag">MariaDB</span>
+      </div>
+      <ul>
+        <li>피카플레이 / 쌤카페 Android 앱 개발</li>
+        <li>피카오더 개발, 피카매장관리 Pro 개발</li>
+        <li>주문 및 결제 서비스 개발, 결제 시스템 연동</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h4>해외 서비스 구축 <span class="sub-period">2012.01 ~ 2014.03 · 인도네시아 자카르타</span></h4>
+      <ul>
+        <li>인도네시아 버전 개발, 인증 서버 개발, 피카툴즈 개발</li>
+        <li>넷마블 퍼블리싱 지원, 현지 기술 지원, 현지 직원 교육 및 관리</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <span class="company">이오소프트</span>
+      <span class="period">2006.07 ~ 2007.02</span>
+    </div>
+    <div class="job-title">소프트웨어 개발자</div>
+    <div class="project">
+      <h4>KT KAPS 시스템</h4>
+      <div class="tag-row" style="margin-bottom:.4rem">
+        <span class="tag">VC++</span><span class="tag">TChart</span><span class="tag">Xtreme Toolkit</span><span class="tag">Oracle</span>
+      </div>
+      <ul>
+        <li>GUI 개발, 차트 컴포넌트 개발, 라이브러리 개발</li>
+        <li>InstallShield 기반 설치 프로그램 개발</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <span class="company">온세통신</span>
+      <span class="period">2005.07 ~ 2006.06</span>
+    </div>
+    <div class="job-title">소프트웨어 개발자</div>
+    <div class="project">
+      <h4>가상주민번호 시스템 개발</h4>
+      <div class="tag-row" style="margin-bottom:.4rem">
+        <span class="tag">C++</span><span class="tag">Java</span><span class="tag">XML</span><span class="tag">IOCP</span>
+      </div>
+      <ul>
+        <li>가상주민번호 모듈 개발, 시스템 UI 개발, 패치 프로그램 개발</li>
+        <li>모바일 연동 프로토콜 설계, 서버 개발</li>
+        <li>InstallShield 기반 설치 프로그램 개발</li>
+      </ul>
+    </div>
+    <div class="project">
+      <h4>무선인터넷 서비스 개발</h4>
+      <div class="tag-row" style="margin-bottom:.4rem">
+        <span class="tag">Java</span><span class="tag">JSP</span><span class="tag">DHTML</span>
+      </div>
+      <ul>
+        <li>무선 포털 개발, 웹 서비스 개발, 관리 도구 개발, 컴포넌트 개발</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <span class="company">뉴소프트기술</span>
+      <span class="period">2001.06 ~ 2005.03</span>
+    </div>
+    <div class="job-title">소프트웨어 개발자</div>
+    <div class="project">
+      <h4>업무용 플랫폼 개발</h4>
+      <div class="tag-row" style="margin-bottom:.4rem">
+        <span class="tag">MFC</span><span class="tag">ATL</span><span class="tag">VB</span><span class="tag">Oracle</span><span class="tag">MSSQL</span>
+      </div>
+      <ul>
+        <li>ERP 전용 브라우저 개발, 업무용 컴포넌트 개발, 보안 모듈 개발</li>
+        <li>InstallShield 기반 설치 프로그램 개발, 서버 및 클라이언트 기술 지원</li>
+      </ul>
+    </div>
+    <div class="project">
+      <h4>닷넷 기반 플랫폼 개발</h4>
+      <div class="tag-row" style="margin-bottom:.4rem"><span class="tag">C#</span></div>
+      <ul>
+        <li>공통 컴포넌트 개발, 표준 UI 개발, 플랫폼 모듈 개발</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <span class="company">노머니커뮤니케이션</span>
+      <span class="period">2000.06 ~ 2001.03</span>
+    </div>
+    <div class="job-title">웹 개발자</div>
+    <div class="project">
+      <h4>웹 서비스 개발</h4>
+      <div class="tag-row" style="margin-bottom:.4rem">
+        <span class="tag">ASP</span><span class="tag">JSP</span><span class="tag">VB</span><span class="tag">C++</span>
+      </div>
+      <ul>
+        <li>대학 리포트 서비스 개발, 음악메일 서비스 개발</li>
+        <li>즉석 복권 서비스 개발, 쇼핑몰 개발, 게임 서비스 개발</li>
+        <li>배너 자동화 시스템 개발</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">학력 · 자격증</h2>
+  <div class="edu-cert">
+    <div class="row"><span>인제대학교 전산학과</span><span>1993.03 ~ 2001.02</span></div>
+    <div class="row"><span>정보처리기사</span><span></span></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">개인 개발 활동 · 현재 연구 분야</h2>
+  <div class="research-tags">
+    <span class="tag">개인 프로젝트 개발</span><span class="tag">Android 개발 연구</span>
+    <span class="tag">Flutter 개발 연구</span><span class="tag">AI 활용 개발 연구</span>
+    <span class="tag">오픈소스 분석 및 학습</span><span class="tag">AI Agent</span>
+    <span class="tag">Multi-Agent System</span><span class="tag">OpenAI API</span>
+    <span class="tag">Claude API</span><span class="tag">OpenRouter</span>
+    <span class="tag">LLM 기반 서비스 개발</span>
+  </div>
+</section>
+
+<footer>resume/resume.md 기반 · github.com/ImDaeseong/career</footer>
+
+</body>
+</html>
