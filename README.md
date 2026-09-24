@@ -24,3 +24,6 @@ python scripts/career_tracker.py report private/career-tracker.json
 ```powershell
 python scripts/validate_repo.py
 ```
+# career
+
+**🤔 [쉬운 설명 보기](ELI5.html)** — 비개발자를 위한 한 페이지 요약
