@@ -5,6 +5,7 @@ from __future__ import annotations
 from html.parser import HTMLParser
 from pathlib import Path
 import re
+import subprocess
 import sys
 
 
@@ -125,12 +126,33 @@ def main() -> int:
             if token not in text:
                 failures.append(f"summary drift: {path.relative_to(ROOT)} missing {token}")
 
+    tracker_example = ROOT / "examples/career-tracker.example.json"
+    tracker_result = subprocess.run(
+        [sys.executable, str(ROOT / "scripts/career_tracker.py"), "validate", str(tracker_example)],
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        check=False,
+    )
+    if tracker_result.returncode != 0:
+        failures.append(f"career tracker example invalid: {tracker_result.stderr.strip()}")
+
+    test_result = subprocess.run(
+        [sys.executable, "-m", "unittest", "discover", "-s", str(ROOT / "tests")],
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        check=False,
+    )
+    if test_result.returncode != 0:
+        failures.append(f"career tracker regression tests failed: {test_result.stderr.strip()}")
+
     if failures:
         for failure in failures:
             print(f"FAIL {failure}")
         return 1
 
-    print(f"PASS: {len(files)} files; text, links, HTML, skill metadata, and resume summary are valid.")
+    print(f"PASS: {len(files)} files; site, skills, resume summary, and career tracker tests are valid.")
     return 0
 
 

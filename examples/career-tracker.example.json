@@ -1,0 +1,33 @@
+{
+  "evidence": [
+    {
+      "id": "evidence-example-1",
+      "claim": "예시 프로젝트에서 반복 작업을 자동화했다.",
+      "source": "공개 가능한 예시 저장소 또는 문서 경로",
+      "public": true,
+      "verified_at": "2026-09-24"
+    }
+  ],
+  "applications": [
+    {
+      "id": "application-example-1",
+      "company_alias": "example-company",
+      "role": "example-role",
+      "resume_version": "example-v1",
+      "applied_at": "2026-09-24",
+      "stage": "applied",
+      "requirements": [
+        {
+          "text": "반복 작업 자동화 경험",
+          "status": "covered",
+          "evidence_ids": ["evidence-example-1"]
+        },
+        {
+          "text": "특정 도메인 경험",
+          "status": "gap",
+          "evidence_ids": []
+        }
+      ]
+    }
+  ]
+}
