@@ -73,7 +73,11 @@ def main() -> int:
         if duplicate_ids:
             failures.append(f"duplicate HTML ids: {path.relative_to(ROOT)}: {duplicate_ids}")
         for reference in parser.references:
-            if reference.startswith("#") and reference[1:] not in parser.ids:
+            # "#" alone is a conventional placeholder (back-to-top / JS-hook
+            # link), not a reference to any element id -- flagging it as a
+            # broken anchor would be a false positive (2026-09-26 independent
+            # review; latent, no such link exists in this repo yet).
+            if reference.startswith("#") and reference != "#" and reference[1:] not in parser.ids:
                 failures.append(f"broken HTML anchor: {path.relative_to(ROOT)} -> {reference}")
             target = local_target(path, reference)
             if target is not None and not target.exists():
