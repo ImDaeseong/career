@@ -27,3 +27,5 @@ python scripts/validate_repo.py
 # career
 
 **🤔 [쉬운 설명 보기](ELI5.html)** — 비개발자를 위한 한 페이지 요약
+
+**설계 문서:** [DESIGN.md](DESIGN.md) — 경력 주장, 근거, 비공개 자료의 경계
