@@ -1,3 +1,9 @@
+# career
+
+> **핵심:** 경력 주장, 비공개 근거, 지원 결과를 분리해 다음 지원 판단에 연결합니다.
+
+[쉬운 설명](ELI5.html) · [구조와 설계](DESIGN.md)
+
 <div align="center">
 
 **<a href="https://imdaeseong.github.io/career/" target="_blank" rel="noopener noreferrer">이력서 보기</a>**  ·  **<a href="https://imdaeseong.github.io/career/mbti.html" target="_blank" rel="noopener noreferrer">경력 기반 강점 분석 보기</a>**
@@ -24,8 +30,3 @@ python scripts/career_tracker.py report private/career-tracker.json
 ```powershell
 python scripts/validate_repo.py
 ```
-# career
-
-**🤔 [쉬운 설명 보기](ELI5.html)** — 비개발자를 위한 한 페이지 요약
-
-**설계 문서:** [DESIGN.md](DESIGN.md) — 경력 주장, 근거, 비공개 자료의 경계
